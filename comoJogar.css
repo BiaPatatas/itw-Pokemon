@@ -1,0 +1,48 @@
+
+
+#passoNumero1{
+    display: flex;
+}
+
+.WidhtHalf{
+    width: 30%;
+}
+
+.WidhtLeft{
+    width: 70%;
+}
+
+#numero{
+    position: relative;
+    left: 0;
+    bottom:135px;
+}
+
+.ladoEsquerdo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;  
+    width: 30vw;
+}
+
+.ladoDireito{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;  
+    width: 70vw;
+}
+
+.tudo{
+    display: flex;
+    padding-top: 100px;
+}
+
+.redes{
+    width: 10vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+  }

@@ -1,0 +1,106 @@
+@import url("http://fonts.cdnfonts.com/css/machine-gunk");
+
+body {
+    background-image: url("fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 134%;
+    
+    
+}
+
+h1 {
+    font-family: 'Machine Gunk', sans-serif; 
+    color: salmon;
+    font-size: 40px;
+}
+
+h2{
+    font-family: cursive; 
+    font-size: 25px;
+    position: relative;
+    top: 100px;
+    left: 70px;
+    color: rgb(129, 129, 118);
+}
+
+#titulo2{
+    font-family: cursive; 
+    font-size: 25px;
+    position: absolute;
+    top: 350px;
+    left: 490px;
+    color: rgb(129, 129, 118); 
+}
+
+#titulo3{
+    font-family: cursive; 
+    font-size: 25px;
+    position: absolute;
+    top: 350px;
+    left: 890px;
+    color: rgb(129, 129, 118); 
+}
+
+p {
+    font-family: cursive;
+}
+
+.col1{
+    float: left;
+    margin: 90px;
+    z-index: 1;
+    width: 370px;
+    position: relative;
+    top: 20px;
+    left: -30px;
+
+
+}
+
+#fundoRedondo {
+    position: absolute;
+    top: 230px;
+    left: 50px;
+    z-index: -1;
+}
+
+#fundoRedondo2 {
+    position: absolute;
+    top: 340px;
+    left: 475px;
+    z-index: -1;
+}
+
+#fundoRedondo3{
+    position: absolute;
+    top: 340px;
+    left: 850px;
+    z-index: -1;
+}
+
+
+#youtube{
+    position: absolute;
+    top: 360px;
+    left: 1285px;
+    z-index: 1;
+
+}
+
+.col2 {
+    float: center;
+    width: 300px;
+    margin: 70px;
+    position: absolute;
+    top: 370px;
+    left: 435px;
+}
+
+#col3 {
+    position: absolute;
+    top: 440px;
+    left: 870px;
+    width: 300px;
+
+}
+

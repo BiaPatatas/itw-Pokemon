@@ -1,0 +1,22 @@
+body {
+    background: url("imagens/fundo.jpg") no-repeat center fixed;     
+    background-size: cover;
+    margin:0px;
+    font-family: 'Machine Gunk', sans-serif;
+  }
+
+  .i1 { grid-area: boneco1; }
+  .i2 { grid-area: boneco2; }
+  .i3 { grid-area: boneco3; }
+  .i4 { grid-area: home; }
+   
+  .grid-container {
+    display: grid;
+    grid-template-rows: repeat(3, 33%);
+    grid-template-columns: repeat(3, 33%);
+    grid-template-areas:
+    ' . . . '
+    'boneco1 boneco2 boneco3 '
+    ' . . home ';
+    justify-items: center;
+  }
