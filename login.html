@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 <head>
   <link rel="stylesheet" href="site.css">
-  <link rel="stylesheet" href="logitn.css">
+  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="form.js">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
 </head>
@@ -49,41 +49,35 @@
   </div>
 </nav>
 
-
-
-  <div class="wrapper">
-      <div class="container">
-        
-      <div class=boxsign>
-        <div class="signup">Sign Up</div>
-          <div class="signup-form">
-            <input type="text" placeholder="Email" class="input"><br />
-            <input type="text" placeholder="Nome" class="input"><br />
-            <input type="password" placeholder="Password" class="input"><br />
-            <div class="box">Criar Conta</div>
-        </div>
-        </div>
-
-        <div class=boxlogin>
-        <div class="login" >Log In</div>
-        <div class="login-form" > 
-            <input type="text" placeholder="Email ou Nome" class="input"><br />
-            <input type="password" placeholder="Password" class="input"><br />
-            <div class="box"><a href="site.html"class="box">log in</a></div>
-            <span><a href="#">Esqueci-me da Password!</a></span>
-        </div>
-        </div>
+  <div class="container">
+    <div class="text">
+Login </div>
+<form name="jogador">
+      <div class="data">
+        <label>Email</label>
+        <input type="text" name="mail" required><br>
       </div>
-  </div>
-    
-  </div>
+<div class="data">
+        <label>Password</label>
+        <input type="password" name="password" required><br><br>
+      </div>
+<div class="forgot-pass">
+<a href="#">Forgot Password?</a></div>
+<div class="btn">
+        <div class="inner">
+</div>
+<button type="submit" onclick="myFunc2()" value="LOGIN">login</button>
+</div>
 
-  <footer>
-    ITW | Angelo Bastos & Beatriz Patatas & Rafael Barreiros, © 2021
-</footer>
+<div class="signup-link">
+Not a member? <a href="#">Signup now</a></div>
+
+</form>
+</div>
+</div>
+
 
 </body>
 </html>
-
 
 
