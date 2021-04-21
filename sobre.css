@@ -1,106 +1,119 @@
-@import url("http://fonts.cdnfonts.com/css/machine-gunk");
-
 body {
-    background-image: url("fundo.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 134%;
-    
-    
+    background: url("imagens/fundo_sobre.jpg") no-repeat center fixed;     
+    background-size: cover;
+    margin:0px;
+    font-family: 'Machine Gunk', sans-serif;
+  }
+  
+  .topnav {
+      background-color: white;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      height: 10vh;
+      display: flex;
+  }
+  
+  .topnav-content{
+    height: 100%;
+    width: 20%;
+  }
+   
+  .topnav a {
+      float: left;
+      color: black;
+      text-decoration: none;
+      font-size: 20px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .topnav a:hover {
+      background-color:black;
+      color:white;
+  }
+  
+  .topnav a.active {
+      background-color:black;
+      color: white;
+  }
+  #Regras{
+    text-align: left;
 }
 
-h1 {
-    font-family: 'Machine Gunk', sans-serif; 
-    color: salmon;
-    font-size: 40px;
+#Criadores{
+    text-align: center;
+}
+  
+#imagem.bola {
+    left: 50%;
+    top: 50%;
+    position: absolute; 
 }
 
-h2{
-    font-family: cursive; 
-    font-size: 25px;
-    position: relative;
-    top: 100px;
-    left: 70px;
-    color: rgb(129, 129, 118);
-}
-
-#titulo2{
-    font-family: cursive; 
-    font-size: 25px;
+h3 {
     position: absolute;
-    top: 350px;
-    left: 490px;
-    color: rgb(129, 129, 118); 
+    bottom: 240px;
+    left: 310px;
+    color: white;
+  }
+  
+  #logo a:hover{
+    background-color: white;
+  }
+  
+  .logoPokemon{
+    width: 20vw;
+  }
+  
+  .top-elements{
+    width : 70vw;
+    height: 100%;
+  }
+  
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% 80%;
+    padding-top: 1%;
+    margin: 1%;
+}
+.item1 {
+  font-family: cursive;
+  color: white;
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 20px;
+  margin-left: 10px;
+}
+.item2 {
+background: black;
+opacity: 75%;
+color: white;
+font-size: 30px;
+font-family: cursive;
+padding-top: 1%;
+padding-left: 2%;
+padding-bottom: 3%;
+grid-column: 1;
+grid-row: 2;
+align-self: 1;
+box-shadow: rgba(0, 0, 0, 0.1);
+margin:10px;
+}
+.youtube {
+  background: black;
+  opacity: 75%;
+  grid-column: 2;
+  grid-row: 2;
+  align-self: center;
+  box-shadow: rgba(0, 0, 0, 0.1);
+  padding: 3%;
+
 }
 
-#titulo3{
-    font-family: cursive; 
-    font-size: 25px;
-    position: absolute;
-    top: 350px;
-    left: 890px;
-    color: rgb(129, 129, 118); 
-}
 
-p {
-    font-family: cursive;
-}
-
-.col1{
-    float: left;
-    margin: 90px;
-    z-index: 1;
-    width: 370px;
-    position: relative;
-    top: 20px;
-    left: -30px;
-
-
-}
-
-#fundoRedondo {
-    position: absolute;
-    top: 230px;
-    left: 50px;
-    z-index: -1;
-}
-
-#fundoRedondo2 {
-    position: absolute;
-    top: 340px;
-    left: 475px;
-    z-index: -1;
-}
-
-#fundoRedondo3{
-    position: absolute;
-    top: 340px;
-    left: 850px;
-    z-index: -1;
-}
-
-
-#youtube{
-    position: absolute;
-    top: 360px;
-    left: 1285px;
-    z-index: 1;
-
-}
-
-.col2 {
-    float: center;
-    width: 300px;
-    margin: 70px;
-    position: absolute;
-    top: 370px;
-    left: 435px;
-}
-
-#col3 {
-    position: absolute;
-    top: 440px;
-    left: 870px;
-    width: 300px;
-
-}
 
