@@ -2,8 +2,8 @@
 <html>
 <head>
   <link rel="stylesheet" href="site.css">
-  <link rel="stylesheet" href="form.css">
-  <link rel="stylesheet" href="form.js">
+  <link rel="stylesheet" href="account.css">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
   <link href="http://fonts.cdnfonts.com/css/machine-gunk" rel="stylesheet">
@@ -55,17 +55,23 @@
 SIGN UP </div>
 <form name="jogador">
     <div class="data">
-        <label>Full Name</label>
+        <label>User Name</label>
         <input type="text" name="name" required><br>
     </div>
     <div class="data">
         <label>Gender</label>
-        <input type="text" name="gender" required> <br> 
+        <select>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+
+
+        </select> 
 
     </div>
       <div class="data">
         <label>Email</label>
-        <input type="text" name="mail" required><br>
+        <input type="email" name="mail" required><br>
       </div>
 <div class="data">
         <label>Password</label>
@@ -74,11 +80,15 @@ SIGN UP </div>
       <div class="data">
       <label>Repeat Password</label>
       <input type="password" name="repeatpw" required>
-     </div>
+      </div>
+      <div class="check">
+        <input type="checkbox" checked="checked" name="remember" > Remember me
+      </label>
+      </div>
       <div class="btn">
         <div class="inner">
-</div>
-<button type="submit" onclick="myFunc2()" value="CREATE ACCOUNT">CREATE ACCOUNT</button>
+          </div>
+<button type="submit" onclick="myFunc2()" value="CREATE ACCOUNT"> ACCOUNT</button>
 </div>
 </div>
 </form>
@@ -88,5 +98,6 @@ SIGN UP </div>
 
 </body>
 </html>
+
 
 
