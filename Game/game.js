@@ -58,3 +58,44 @@
 	  gridItem.appendChild(circle);
 	}
 	window.addEventListener("keydown", handleKey);
+
+var stmin = 0;
+  var stsec = 0;
+  var stmilisec = 0;
+  
+  
+
+  var milisec = 0;
+  var sec = 0;
+  var min = 0;
+  
+  var startchron = 0;
+  
+  function chronometer() {
+    if(startchron == 1) {
+      milisec += 1;       
+      
+      if(milisec > 9) {
+        milisec = 0;
+        sec += 1;
+      }
+  
+      
+      if(sec > 59) {
+        sec = 0;
+        min += 1;
+      }
+  
+      
+      document.getElementById('time').innerHTML = min+ ' : '+ sec+ '<sub>'+ milisec+ '</sub>';
+	  if(milisec == stmilisec && sec == stsec && min == stmin) toAutoStop();
+      else setTimeout("chronometer()", 100);
+    }
+      
+	
+  }
+  
+  function startChr() { startchron = 1; chronometer(); }      
+  
+  
+
