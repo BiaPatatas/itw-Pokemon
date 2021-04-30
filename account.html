@@ -3,6 +3,7 @@
 <head>
   <link rel="stylesheet" href="site.css">
   <link rel="stylesheet" href="account.css">
+  <link rel="javascript" href="form.js">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
@@ -56,48 +57,43 @@ SIGN UP </div>
 <form name="jogador">
     <div class="data">
         <label>User Name</label>
-        <input type="text" name="name" required><br>
+        <input type="text" name="name" id="username" required><br>
     </div>
     <div class="data">
-        <label>Gender</label>
+        <label id="gender">Gender</label>
         <select>
           <option>Male</option>
           <option>Female</option>
           <option>Other</option>
-
-
         </select> 
-
     </div>
-      <div class="data">
-        <label>Email</label>
-        <input type="email" name="mail" required><br>
-      </div>
-<div class="data">
-        <label>Password</label>
-        <input type="password" name="password" required><br><br>
-      </div>
-      <div class="data">
+    <div class="data">
+      <label>Email</label>
+        <input type="email" name="mail" id="email" required><br>
+    </div>
+    <div class="data">
+      <label>Password</label>
+      <input type="password" name="password" id="pwd" required><br><br>
+    </div>
+    <div class="data">
       <label>Repeat Password</label>
-      <input type="password" name="repeatpw" required>
+        <input type="password" name="repeatpw" required>
+    </div>
+    <div class="check">
+      <input type="checkbox" checked="checked" name="remember" > Remember me
+    </div>
+    <div class="btn">
+      <div class="inner">
       </div>
-      <div class="check">
-        <input type="checkbox" checked="checked" name="remember" > Remember me
-      </label>
-      </div>
-      <div class="btn">
-        <div class="inner">
-          </div>
-<button type="submit" onclick="myFunc2()" value="CREATE ACCOUNT"> ACCOUNT</button>
+<button type="submit" onclick="store()" value="CREATE ACCOUNT"> ACCOUNT</button>
 </div>
 </div>
 </form>
 </div>
 </div>
-
+<script type="text/javascript"  language="javascript" src="form.js"></script>
 
 </body>
 </html>
-
 
 
