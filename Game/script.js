@@ -242,3 +242,9 @@ const character = {
 		startTimer(fiveMinutes, display);
 	};
   
+  function per(){
+    var path = localStorage.getItem("imagem");
+    var imagem = document.getElementsByClassName("character").style.background-image;
+    alert(imagem);
+    imagem = url(path);
+  }
