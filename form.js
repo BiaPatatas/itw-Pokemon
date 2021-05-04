@@ -1,8 +1,12 @@
-function store() {
-    var username = document.getElementById('username');
-    var gender = document.getElementById('gender');
-    var email = document.getElementById('email');
-    var pwd = document.getElementById('pwd');
+const signUp = e => {
+    let formData = {
+     username : document.getElementById('username').value,
+     gender : document.getElementById('gender').value,
+     email : document.getElementById('email').value,
+     pwd : document.getElementById('pwd').value,
+     age : document.getElementById('age').value,
+     repeatpw : document.getElementById('repeatpw').value,
+    }
 
     var numbers = /[0-9]/g;
 
@@ -19,15 +23,20 @@ function store() {
     }else if(!pwd.value.match(numbers)){
         alert('please add 1 number to password');
 
+    }else if (age.value.length == 0 && age.value.length >=3){
+        alert('Please fill in age');
 
-    }else{
-        localStorage.setItem('username', username.value);
-        localStorage.setItem('gender', gender.value);
-        localStorage.setItem('email', email.value);
-        localStorage.setItem('pwd', pwd.value);
+    }else if (pwd.value != repeatpw.value){
+        alert('Passwords are not equal');
+    }
+
+    else{
+        localStorage.setItem('formData', JSON.stringify(formData));
+           
+        }
         alert('Your account has been created');
     }
-}
+
 
 
 function check() {
@@ -46,3 +55,4 @@ function check() {
     }
 
 }
+
