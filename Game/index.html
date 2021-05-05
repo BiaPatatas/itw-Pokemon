@@ -26,20 +26,25 @@
         padding: 20px;
         display: flex;
         justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr;       
       }
     
       .score {
         color: white;
         font-weight: bold;
       }
+
       .info {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
         align-content: center;
-        width: 35%;
-        margin-top: 400px;
+        width:30%;
+        float:right; 
+        text-align: center;
+
       }
     
       .infoBox {
@@ -109,8 +114,7 @@
     * {
       box-sizing: border-box;
     }
-    
-    
+ 
     
     .page-wrapper {
       max-width: 960px;
@@ -200,6 +204,8 @@
         margin: 0 auto 1rem; 
         box-shadow: 8px 8px grey;
         margin-left: -100px;
+        grid-column:1;
+        float:left; 
       }
     
       #myDIV {
@@ -209,8 +215,8 @@
       margin-top: -10px;
       margin-left: -110px;
       background-color: lightblue;
-      z-index:5 ;
-      box-shadow: 8px 8px grey;
+      z-index:2 ;
+          
     }
     
     .oponente{
@@ -223,6 +229,11 @@
       width: 100px;
       margin-top: 30px;
     }
+
+    .infor{
+      margin-left: 1000px;
+      margin-top: -200px;
+  }
       
       </style>
     
@@ -237,43 +248,42 @@
       }
       </script>
     <body>
-      <h1>START PLAY NOW!!!</h1>
-    <div class="game"><main class="map">
-      <div class="container grid"></div>
-    </main>
-    
+      <h1>CATCH THE POKEBALLS!!!</h1>
+    <div class="game"><main class="map"></main>
+  
       <div class="board">
         <div class="character" id="personagem"></div>
        
-     </div>
+      </div>
+      <button class="botao" onclick="myFunction()">BATTLE</button>
       <div id="myDIV">
       <img class="oponente" src="../imagens/personagem2.png">
+      <div style="margin-top: 200px;margin-left: 80px;" class="character" id="personagem"></div>
         <div id="roll-dice">
           <button type="button" value="Trow dice" onclick="rolldices()">Roll dice</button>
-        <div id="jogador1"></div>
+         
+          <div id="jogador1"></div>
           <span id="roll-result1"></span>
           <span id="roll-result2"></span>
         </div>
+
         <div id="jogador2">
           <span id="roll-result3"></span>
           <span id="roll-result4"></span>
         </div>
         </div>
-        </div>
+        
       </div>
 
-
-     <div class="info">
-      <div class="infoBox"></div>
-      <p>Score: <span class="score">0<span></p>
-      <p id="time">Timer: <div  style="font-size:21px; font-weight:800;"></div></p>
-      <div class="table">
+      <div class="infor">
+        <p>Score: <span class="score">0<span></p> 
+        <p id="time">Timer: <div  style="font-size:21px; font-weight:800;"></div></p>
         <p>TopScore:</p>
-        <p class="highScore"></p>
-       
-      </div>  <button class="botao" onclick="myFunction()">Try it</button> <a href="../site.html" class="item13"><h2>HOME</h2></a>
-    </div>
-    </div>
+            <p class="highScore"></p>
+            <a href="../site.html" class="item13"><h2>HOME</h2></a>
+      </div>
+
+     </div>
+  </div>
   </body>
 </html>
-
