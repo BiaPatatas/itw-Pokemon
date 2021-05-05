@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <link rel="stylesheet" href="styles/personagens.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="personagens.js"></script>
 </head>
 
 <body>
 
-  
-<div class="container">
-  <div class="item1">
-    <video width="500" height="450" controls autoplay muted loop>
-    <source src="videos/gameboy2.mp4" type="video/mp4">
-  </video>
+
+  <div class="container">
+    <div class="item1">
+      <video width="500" height="450" controls autoplay muted loop>
+        <source src="videos/gameboy2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="item2">
+      <h1>ESCOLHE A TUA PERSONAGEM</h1>
+    </div>
+    <div class="item3"><input id="agua" type="radio" name="personagem" value="agua" checked><img onclick="personagem(this.src, this.id)"
+        id="personagemAgua" src="imagens/personagem1.png"></div>
+    <div class="item4"><input id="fogo" type="radio" name="personagem" value="fogo"> <img onclick="personagem(this.src, this.id)"
+        id="personagemFogo" src="imagens/personagem2.png"></div>
+    <div class="item5"><input id="terra" type="radio" name="personagem" value="terra"><img onclick="personagem(this.src, this.id)"
+        id="personagemTerra" src="imagens/personagem3.png"></div>
+    <div class="item6"></div>
+    <div class="item7"></div>
+    <div class="item8"></div>
+    <div class="item9"></div>
+    <div class="item10"></div>
+    <div class="item11"></div>
+    <a href="Game/index.html" class="item12">
+      <h1> JOGAR</h1>
+    </a>
+    <a href="site.html" class="item13">
+      <h1>HOME</h1>
+    </a>
   </div>
-  <div class="item2"><h1>ESCOLHE A TUA PERSONAGEM</h1></div>
-  <div class="item3"><input type="radio" name="personagem"
-value="agua" checked><img id="personagemAgua" src="imagens/personagem1.png"></div>
-  <div class="item4"><input type="radio" name="personagem"
-value="fogo"> <img id="personagemFogo" src="imagens/personagem2.png"></div>
-  <div class="item5"><input type="radio" name="personagem"
-value="terra"><img id="personagemTerra" src="imagens/personagem3.png"></div>
-  <div class="item6"></div>
-  <div class="item7"></div>
-  <div class="item8"></div>
-  <div class="item9"></div>
-  <div class="item10"></div>
-  <div class="item11"></div>
-  <a href="Game/game.html" class="item12"><h1> JOGAR</h1></a>
-  <a href="site.html" class="item13"><h1>HOME</h1></a>
-</div>
- 
-    
+
+
 
 </body>
-</html>
-    
 
-    
+</html>
