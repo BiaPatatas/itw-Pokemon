@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>POKEMON</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+
+  <style>
+
+    body{
+      background: radial-gradient(ellipse at center, rgba(240,249,255,1) 0%,rgba(203,235,255,1) 25%,rgba(161,219,255,1) 100%);
+      }
+      
+    
+      .game {
+        text-align: center;
+        justify-content: center;
+        margin: 10px auto 30px auto;
+        height: 300px;
+        width: 900px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr;       
+      }
+    
+           .info > p {
+        margin: 10px auto;
+        font-family: 'Press Start 2P', cursive;
+        height: 5%;
+        font-size: 20px;
+        text-shadow: slategray 3px 2px;
+        margin-top:50px;
+      }
+    
+      p {
+      color: white;
+      font-weight: bold;
+    }
+    
+    .timer {
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      color: rgba(255, 255, 0, 0.877);
+      font-family: 'Press Start 2P', cursive;
+      font-size: 40px;
+      text-shadow:3px 2px whitesmoke;
+    }
+    
+    .table{
+      border: 2px solid white;
+      width: 80%;
+      font-family: 'Press Start 2P', cursive;
+      margin-top: 30px;
+      font-size: 20px;
+      
+    }
+    .table > p {
+      font-family: 'Press Start 2P', cursive;
+      color: white;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+ 
+    
+    .page-wrapper {
+      max-width: 960px;
+      padding: 1rem;
+      margin: 0 auto;
+    }
+    
+    strong {
+      font-weight: 700;
+    }
+    
+    
+    code {
+      font-family: 'Inconsolata', monospace;
+    }
+    
+    .character {
+      position: absolute; 
+      width: 100px; 
+      height: 110px;
+      margin-top: 10px;
+      margin-left: -5px;
+      background-image: url("../imagens/personagem1.png");
+      
+    }
+    
+    .rock {
+      position: absolute;
+      width: 125px;
+      height: 115px;
+      background-image: url("../imagens/trees.png");
+      margin-left: -10px;
+      margin-top: -5px;
+    }
+    
+      
+    .plant {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    margin-left: 15px;
+    background-image: url("../imagens/pokeball.png");
+}
+    .win-message {
+      position: absolute;
+      width: 600px;
+      top: 200px;
+      background-color: rgba(255,255,255,0.75);
+      font-family: 'Inconsolata', monospace;
+      text-align: center;
+      font-weight: 700;
+      font-size: 4rem;
+      margin-left: -18px;
+    }
+    
+    .item13{
+      color:white;
+      text-align: center;
+      background-color: black;
+      height: 50px;
+      width: 130px;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 4px 3px white;
+      text-decoration: none;
+      margin-top:100px;
+      font-size: 16px;
+      font-family: 'Machine Gunk', sans-serif;
+      }
+      
+      .item13:hover{
+      color:white;
+      transform: scale(1.1);
+      }
+    
+      .finish{
+      color:white;
+      text-align: center;
+      background-color: black;
+      height: 50px;
+      width: 130px;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 4px 3px white;
+      text-decoration: none;
+      margin-top:90px;
+      font-size: 25px;
+      font-family: 'Machine Gunk', sans-serif;
+
+      }
+      .board {
+        padding: 1em;
+        border: 1px solid white;
+        text-align: center;
+        z-index: 1;
+        position: relative; 
+        background-color:yellowgreen; 
+        height: 500px; 
+        width: 600px; 
+        margin: 0 auto 1rem; 
+        box-shadow: 8px 8px grey;
+        margin-left: -100px;
+        grid-column:1;
+        float:left; 
+      }
+    
+      #myDIV {
+      position:absolute;
+      width: 610px;
+      height: 520px;
+      margin-top: -10px;
+      margin-left: -110px;
+      background-color: lightblue;
+      z-index:2 ;
+          
+    }
+    
+    .oponente{
+      margin-top: 50px;
+      margin-left:300px
+    }
+       
+
+    .infor{
+      margin-left: 1000px;
+      margin-top: -300px;
+      font-size: 24px;
+      text-shadow:2px 2px rgb(63, 61, 61)  ;
+      font-family: 'Press Start 2P', cursive;
+  }
+
+  .dice{
+    background-color: white;
+    font-family: 'Machine Gunk', sans-serif;
+    font-size: 18px;
+    border-color: #e7e7e7;
+  }
+
+  .battle{
+    background-color: white;
+    font-family: 'Machine Gunk', sans-serif;
+    font-size: 18px;
+    border-color: #e7e7e7;
+    height: 50px;
+    width: 100px;
+    margin-top: -5px;
+    margin-left: 10px;
+  }
+      
+      </style>
+    
+    <script>
+      function myFunction() {
+        var x = document.getElementById('myDIV');
+        if (x.style.visibility === 'hidden') {
+          x.style.visibility = 'visible';
+        } else {
+          x.style.visibility = 'hidden';
+        }
+      }
+      </script>
+    <body>
+      <h1>CATCH THE POKEBALLS!!!</h1>
+    <div class="game"><main class="map"></main>
+  
+      <div class="board">
+        <div class="character" id="personagem"></div>
+       
+      </div>
+      <button class="battle" onclick="myFunction()">BATTLE</button>
+      <div id="myDIV">
+      <img class="oponente" src="../imagens/personagem2.png">
+      <div style="margin-top: 200px;margin-left: 80px;" class="character" id="personagem"></div>
+        <div id="roll-dice">
+          <button class="dice" type="button" value="Trow dice" onclick="rolldices()">Roll dice</button>
+         
+          <div id="jogador1"></div>
+          <span id="roll-result1"></span>
+          <span id="roll-result2"></span>
+        </div>
+
+        <div id="jogador2">
+          <span id="roll-result3"></span>
+          <span id="roll-result4"></span>
+        </div>
+        </div>
+        
+      </div>
+
+      <div class="infor">
+        <p>Score: <span class="score">0<span></p> 
+        <p id="time">Timer: <div  style="font-size:21px; font-weight:800;"></div></p>
+        <p>TopScore:</p>
+            <p class="highScore"></p>
+            <button class="finish" type="button" value="Finish game" onclick="finish()">FINISH</button>
+            <a href="../site.html" class="item13"><h2>HOME</h2></a>
+      </div>
+
+     </div>
+  </div>
+  </body>
+</html>
+
