@@ -19,7 +19,11 @@ const character = {
   
   const plants = [
     {x: 2, y: 3},
-    {x: 5, y: 2}
+    {x: 0, y: 1},
+    {x: 1, y: 2},
+    {x: 5, y: 4},
+    {x: 5, y: 4},
+    {x: 5, y: 0}
   ];
 
   
@@ -95,7 +99,7 @@ const character = {
     }
     const winMessageElement = document.createElement('div');
     winMessageElement.className = 'win-message';
-    winMessageElement.innerHTML = 'FINISH!!';
+    winMessageElement.innerHTML = 'Battle!';
     document.querySelector('.board').appendChild(winMessageElement);
   };
   
@@ -319,4 +323,3 @@ const character = {
 
 
 }
-
